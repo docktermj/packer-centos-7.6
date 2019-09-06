@@ -1,11 +1,11 @@
-# packer-centos-7.2
+# packer-centos-7.6
 
 ## Overview
 
 This repository is an example of how to build machine images using [Packer](https://www.packer.io/).
 
 In this example, a
-CentOS 7.2 Minimal ISO image
+CentOS 7.6 Minimal ISO image
 is used to create machine images for VMware and VirtualBox.
 
 ### Contents
@@ -39,17 +39,12 @@ is used to create machine images for VMware and VirtualBox.
 
     ```console
     export GIT_ACCOUNT=docktermj
-    export GIT_REPOSITORY=packer-centos-7.2
-    ```
-
-1. Follow steps in [clone-repository](https://github.com/docktermj/KnowledgeBase/blob/master/HowTo/clone-repository.md) to install the Git repository.
-
-1. After the repository has been cloned, be sure the following are set:
-
-    ```console
+    export GIT_REPOSITORY=packer-centos-7.6
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
+
+1. Follow steps in [clone-repository](https://github.com/docktermj/KnowledgeBase/blob/master/HowTo/clone-repository.md) to install the Git repository.
 
 ## Build
 
@@ -95,15 +90,15 @@ and will not be reused across repository instances.
 
 1. Choose VMX file
    1. VMware Workstation > File > Open...
-      1. Navigate to `${GIT_REPOSITORY_DIR}/packer-centos-7.2/output-vmware-iso-nnnnnnnnnn/`
-      1. Choose `packer-centos-7.2-nnnnnnnnnn.vmx`
+      1. Navigate to `${GIT_REPOSITORY_DIR}/packer-centos-7.6/output-vmware-iso-nnnnnnnnnn/`
+      1. Choose `packer-centos-7.6-nnnnnnnnnn.vmx`
 1. Optional: Change networking
-   1. Navigate to VMware Workstation > My Computer > packer-centos-7.2-nnnnnnnnnn
-   1. Right click on "packer-centos-7.2-nnnnnnnnnn" and choose "Settings"
+   1. Navigate to VMware Workstation > My Computer > packer-centos-7.6-nnnnnnnnnn
+   1. Right click on "packer-centos-7.6-nnnnnnnnnn" and choose "Settings"
    1. Choose "Network Adapter" > "Network Connection" > :radio_button: Bridged: Connected directly to the physical network
    1. Click "Save"
 1. Run image
-   1. Choose VMware Workstation > My Computer > packer-centos-7.2-nnnnnnnnnn
+   1. Choose VMware Workstation > My Computer > packer-centos-7.6-nnnnnnnnnn
    1. Click "Start up this guest operating system"
 1. Username: vagrant  Password: vagrant
 
@@ -117,8 +112,8 @@ and will not be reused across repository instances.
     cd ${GIT_REPOSITORY_DIR}
 
     vagrant box add \
-      --name="packer-centos-7.2-virtualbox" \
-      ./packer-centos-7.2-virtualbox-nnnnnnnnnn.box
+      --name="packer-centos-7.6-virtualbox" \
+      ./packer-centos-7.6-virtualbox-nnnnnnnnnn.box
     ```
 
 ### Run
@@ -127,10 +122,10 @@ An example of how to run in a new directory.
 
 #### Specify directory
 
-1. In this example the `/tmp/packer-centos-7.2` directory is used.
+1. In this example the `/tmp/packer-centos-7.6` directory is used.
 
     ```console
-    export PACKER_CENTOS_72=/tmp/packer-centos-7.2
+    export PACKER_CENTOS_72=/tmp/packer-centos-7.6
     ```
 
 #### Initialize directory
@@ -141,7 +136,7 @@ An example of how to run in a new directory.
     mv ${PACKER_CENTOS_72} ${PACKER_CENTOS_72}.$(date +%s)
     mkdir ${PACKER_CENTOS_72}
     cd ${PACKER_CENTOS_72}
-    vagrant init packer-centos-7.2-virtualbox
+    vagrant init packer-centos-7.6-virtualbox
     ```
 
 #### Enable remote login
@@ -206,7 +201,7 @@ Example:
 1. To remove Vagrant image, on host machine:
 
     ```console
-    vagrant box remove packer-centos-7.2-virtualbox
+    vagrant box remove packer-centos-7.6-virtualbox
     ```
 
 ## References
