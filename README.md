@@ -21,7 +21,7 @@ is used to create machine images for VMware and VirtualBox.
 1. [Run on Vagrant / VirtualBox](#run-on-vagrant-virtualbox)
     1. [Add to library](#add-to-library)
     1. [Run](#run)
-    1. [Login to guest machine(#login-to-guest-machine)
+    1. [Login to guest machine](#login-to-guest-machine)
     1. [Find guest machine IP address](#find-guest-machine-ip-address)
     1. [Remote login to guest machine](#remote-login-to-guest-machine)
     1. [Remove image from Vagrant library](#remove-image-from-vagrant-library)
