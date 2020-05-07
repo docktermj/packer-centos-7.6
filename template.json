@@ -21,6 +21,7 @@
     "ssh_username": "vagrant",
     "ssh_password": "vagrant",
     "ssh_port": 22,
+    "ssh_timeout": "1h",
     "virtualbox_version_file": ".vbox_version",
     "vm_name": "packer-centos-7.6-{{user `build_timestamp`}}",
     "vboxmanage": [
@@ -46,6 +47,7 @@
     "ssh_username": "vagrant",
     "ssh_password": "vagrant",
     "ssh_port": 22,
+    "ssh_timeout": "1h",
     "tools_upload_flavor": "linux",
     "vm_name": "packer-centos-7.6-{{user `build_timestamp`}}",
     "vmdk_name": "packer-centos-7.6-{{user `build_timestamp`}}",
